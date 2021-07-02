@@ -4,3 +4,5 @@ obj/
 # file-extensions
 *.o
 *.gch
+
+.vscode/
