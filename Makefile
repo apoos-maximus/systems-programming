@@ -1,7 +1,7 @@
 SHELL 		:= /bin/sh
 
-CCC		:= clang
-CCFLAGS 	:= -std=c17
+CCC			:= gcc
+CCFLAGS 	:= 
 CPPFLAGS	:= -Iinclude
 
 SRC_DIR 	:= src
@@ -24,6 +24,8 @@ $(OBJ_DIR)/%.o 	: 	${LIB_DIR}/%.c
 ls 		: 	${SRC_DIR}/listFiles.c deps
 				${CCC} ${CCFLAGS} ${CPPFLAGS} ${SRC_DIR}/listFiles.c ${OBJS} -o  ${BIN_DIR}/ls
 
+addrinfo :	${SRC_DIR}/addrinfo.c deps
+				${CCC} ${CCFLAGS} ${CPPFLAGS} ${SRC_DIR}/addrinfo.c ${OBJS} -o  ${BIN_DIR}/addrinfo
 
 .PHONY		:	clean
 
